@@ -23,6 +23,7 @@ echo "$options";
 ?>
 		</select>
 	</label>
+  <button type="submit">Eingaben absenden</button>
 </form>
 <?php
 ausgabe_uhrzeit();
