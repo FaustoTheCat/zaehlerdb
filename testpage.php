@@ -14,6 +14,16 @@ include "dbtools.php";
 ?>
 <body>
 Hier soll eine Optionsbox erscheinen, also bald<BR>
+<form action="#">
+	<label>Zähler:
+		<select name="zaehler">
+<?php
+$options = MkOptZaehler();
+echo "$options";
+?>
+		</select>
+	</label>
+</form>
 <?php
 ausgabe_uhrzeit();
 ?>
