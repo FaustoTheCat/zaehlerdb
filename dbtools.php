@@ -24,7 +24,7 @@ foreach ($pdo->query($sql) as $row)
 return ($options);
 }
 
-function GenCounterTable($id);
+function GenCounterTable($id)
 {
   $pdo = db_connect();
   $sql = "SELECT `ablesedatum`,`wert`,\n"
@@ -53,13 +53,13 @@ function GenCounterTable($id);
     ?>
         <tr>
             <td>
-                <?php echo $row->ablesedatum; ?>
+                <?php echo $row['ablesedatum']; ?>
             </td>
             <td>
-                <?php echo $row->Zaehlerstand_diff; ?>
+                <?php echo $row['wert']; ?>
             </td>
             <td>
-                <?php echo $row->beginn; ?>
+                <?php echo $row['Zaehlerstand_diff']; ?>
             </td>
 
       </tr>

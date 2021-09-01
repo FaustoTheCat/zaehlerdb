@@ -11,7 +11,7 @@ $zaehler = htmlspecialchars( $_GET['zaehler']);
 GenCounterTable($zaehler);
 }
 
-
+?>
 
 <html lang=de>
 <head>
