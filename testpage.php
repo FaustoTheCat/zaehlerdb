@@ -1,5 +1,22 @@
-<html>
+<!DOCTYPE html>
+
+<?php
+include "dbtools.php";
+// Formular reaktion:
+//print_r($_GET);
+if (isset( $_GET['zaehler'] ) )
+{
+$zaehler = htmlspecialchars( $_GET['zaehler']);
+// Tabelle mit werten des Zählers ausgeben
+GenCounterTable($zaehler);
+}
+
+
+
+<html lang=de>
 <head>
+  <meta charset="UTF-8">
+  <title>Formular</title>
 <style type="text/css">
 <!--
 input.error {
@@ -8,13 +25,10 @@ input.error {
 -->
 </style>
 </head>
-<?php
-include "dbtools.php";
 
-?>
 <body>
 Hier soll eine Optionsbox erscheinen, also bald<BR>
-<form action="#">
+<form action=""<?php echo $_SERVER["PHP_SELF"]; ?>">
 	<label>Zähler:
 		<select name="zaehler">
 <?php
