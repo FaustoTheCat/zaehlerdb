@@ -38,7 +38,7 @@ function GenCounterTable($id)
     . "ORDER  BY 1, 2";
 ?>
 
-    <table id="meineTabelle" data-role="table" class="ui-responsive"
+    <table border="1" cellpadding=12 rules="all" id="meineTabelle" data-role="table" class="ui-responsive"
            data-mode="columntoggle" data-column-btn-text="Spalten" >
       <thead>
         <tr>
