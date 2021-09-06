@@ -28,7 +28,7 @@ input.error {
 
 <body>
 Hier soll eine Optionsbox erscheinen, also bald<BR>
-<form action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method = "get">
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method = "get">
 	<label>Zähler:
 		<select name="zaehler">
 <?php
