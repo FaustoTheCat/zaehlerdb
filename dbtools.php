@@ -73,6 +73,6 @@ function GenCounterTable($id)
 
 function ausgabe_uhrzeit()
 {
-    echo "<p>Es ist gerade: ". date("DD:MM:YYY H:i:s"). "</p>";
+    echo "<p>Es ist gerade: ". date("d.M.Y H:i:s"). "</p>";
 }
 ?>
