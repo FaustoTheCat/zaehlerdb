@@ -28,12 +28,12 @@ function GenCounterTable($id)
 {
   $pdo = db_connect();
   $sql = "SELECT `ablesedatum`,`wert`,\n"
-    . "       `wert` - (SELECT `wert`     \n"
+    . "       cast(`wert` - (SELECT `wert`     \n"
     . "                       FROM     `v_ablesungen` AS d1\n"
     . "                       WHERE  d1.`ablesedatum` < d0.`ablesedatum`\n"
     . "                       AND `id` = " . $id ." \n"
     . "                       ORDER  BY `ablesedatum` DESC   LIMIT 1\n"
-    . "                     ) AS Zaehlerstand_diff      \n"
+    . "                     ) AS decimal(10,2) ) AS Zaehlerstand_diff      \n"
     . "FROM   `v_ablesungen` AS d0 WHERE `id` = " . $id ." \n"
     . "ORDER  BY 1, 2";
 ?>
